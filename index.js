@@ -2,8 +2,12 @@ var p1Button = document.querySelector("#p1")
 var p2Button = document.getElementById("p2")
 var p1Score = 0;
 var p2Score = 0;
-var winningScore = document.getElementById("winningScore"); 
+var winningScore = document.getElementById("winningScore").value; 
 
+function myFunction(){
+  var winningScore = document.getElementById("winningScore").value; 
+
+}
 function winner(){
   if(p1Score == winningScore){
     document.getElementById("score1").style.color = "green";
