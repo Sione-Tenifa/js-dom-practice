@@ -5,7 +5,9 @@ var p2Score = 0;
 var winningScore = document.getElementById("winningScore").value; 
 
 function myFunction(){
-  var winningScore = document.getElementById("winningScore").value; 
+  var finalScore = document.getElementById("winningScore").value; 
+  winningScore = finalScore
+  console.log(finalScore)
 
 }
 function winner(){
