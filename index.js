@@ -7,19 +7,16 @@ var winningScore = document.getElementById("winningScore").value;
 function myFunction(){
   var finalScore = document.getElementById("winningScore").value; 
   winningScore = finalScore
-  console.log(finalScore)
+  console.log(winningScore)
 
 }
 function winner(){
   if(p1Score == winningScore){
     document.getElementById("score1").style.color = "green";
-    // alert("Player 1 wins")
-    // newgame()
   }else if (p2Score == winningScore){
-    document.getElementById("score2").style.color = "green";
-    // alert("Player 2 wins")   
-    // newgame()
+    document.getElementById("score2").style.color = "green"; 
   }
+
 }
 
 
@@ -37,17 +34,21 @@ reset.addEventListener("click", function(){
 })
 
 function score1(){
-    if( p1Score < winningScore && p2Score !== winningScore ){
-      p1Score++
-      document.getElementById("score1").innerHTML = p1Score
-      console.log(p1Score) 
-      winner()
-    }
+  if( p2Score == winningScore ){
+    alert("GAME OVERR")
+  }else if (p1Score < winningScore && p2Score !== winningScore ) {
+    p1Score++
+    document.getElementById("score1").innerHTML = p1Score
+    console.log(p1Score) 
+    winner()
+  }
 }
   
 
 function score2(){
-  if( p2Score < winningScore && p1Score !== winningScore ){
+  if( p1Score == winningScore ){
+    alert("GAME OVERR")
+  }else if (p2Score < winningScore && p1Score !== winningScore ) {
     p2Score++
     document.getElementById("score2").innerHTML = p2Score
     console.log(p2Score) 
